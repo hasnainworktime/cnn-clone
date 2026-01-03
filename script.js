@@ -62,3 +62,8 @@ function filterNews(category) {
 
 /* Load all news on page load */
 displayNews(news);
+<a onclick="filterCategory('all')">All</a>
+<a onclick="filterCategory('world')">World</a>
+<a onclick="filterCategory('sports')">Sports</a>
+<a onclick="filterCategory('technology')">Technology</a>
+<a onclick="filterCategory('entertainment')">Entertainment</a>
