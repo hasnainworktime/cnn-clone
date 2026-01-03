@@ -65,3 +65,8 @@ body {
 .news-card h3 {
   margin: 10px 0;
 }
+.news-card small {
+  color: #cc0000;
+  display: block;
+  margin-top: 5px;
+}
