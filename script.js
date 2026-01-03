@@ -2,36 +2,63 @@ const news = [
   {
     title: "World leaders meet for global summit",
     image: "https://via.placeholder.com/400x200",
-    description: "Important discussions are taking place."
+    description: "Important discussions are taking place.",
+    category: "World"
   },
   {
-    title: "Tech company launches new product",
+    title: "Championship final ends in surprise",
     image: "https://via.placeholder.com/400x200",
-    description: "The latest innovation hits the market."
+    description: "A thrilling sports finale.",
+    category: "Sports"
   },
   {
-    title: "Sports team wins championship",
+    title: "New AI technology released",
     image: "https://via.placeholder.com/400x200",
-    description: "Fans celebrate historic victory."
+    description: "Tech industry sees big change.",
+    category: "Technology"
   },
   {
-    title: "New movie breaks box office records",
+    title: "Movie breaks box office records",
     image: "https://via.placeholder.com/400x200",
-    description: "Entertainment industry surprised."
+    description: "Entertainment world shocked.",
+    category: "Entertainment"
+  },
+  {
+    title: "International tensions increase",
+    image: "https://via.placeholder.com/400x200",
+    description: "Global situation being monitored.",
+    category: "World"
   }
 ];
 
 const newsGrid = document.getElementById("newsGrid");
 
-news.forEach(item => {
-  const card = document.createElement("div");
-  card.className = "news-card";
+function displayNews(items) {
+  newsGrid.innerHTML = "";
 
-  card.innerHTML = `
-    <img src="${item.image}">
-    <h3>${item.title}</h3>
-    <p>${item.description}</p>
-  `;
+  items.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "news-card";
 
-  newsGrid.appendChild(card);
-});
+    card.innerHTML = `
+      <img src="${item.image}">
+      <h3>${item.title}</h3>
+      <p>${item.description}</p>
+      <small><b>${item.category}</b></small>
+    `;
+
+    newsGrid.appendChild(card);
+  });
+}
+
+function filterNews(category) {
+  if (category === "All") {
+    displayNews(news);
+  } else {
+    const filtered = news.filter(item => item.category === category);
+    displayNews(filtered);
+  }
+}
+
+/* Load all news on page load */
+displayNews(news);
