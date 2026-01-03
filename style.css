@@ -70,3 +70,41 @@ body {
   display: block;
   margin-top: 5px;
 }
+.article-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.article-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.category {
+  color: #cc0000;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.article-container img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.article-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background: #cc0000;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
